@@ -193,7 +193,7 @@ def grpc_cc_library(
       linkstatic: Whether to enable linkstatic on the cc_library.
     """
     visibility = _update_visibility(visibility)
-    copts = []
+    copts = ["-Wno-private-header"],
     if language.upper() == "C":
         copts = copts + if_not_windows(["-std=c11"])
     linkopts = linkopts + if_not_windows(["-pthread"]) + if_windows(["-defaultlib:ws2_32.lib"])
