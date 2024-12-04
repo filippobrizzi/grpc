@@ -55,11 +55,12 @@ def grpc_deps():
         )
 
     if "com_envoyproxy_protoc_gen_validate" not in native.existing_rules():
+        commit = "62ae75e0502e63c42b136cb59f810e31d06ae71f"
         http_archive(
             name = "com_envoyproxy_protoc_gen_validate",
             sha256 = "9372f9ecde8fbadf83c8c7de3dbb49b11067aa26fb608c501106d0b4bf06c28f",
-            strip_prefix = "protoc-gen-validate-1.0.4",
-            urls = ["https://github.com/bufbuild/protoc-gen-validate/archive/refs/tags/v1.0.4.zip"],
+            strip_prefix = "protoc-gen-validate-{commit}".format(commit=commit),
+            urls = ["https://github.com/filippobrizzi/protoc-gen-validate/archive/{commit}".format(commit=commit)],
         )
 
 
