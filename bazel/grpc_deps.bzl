@@ -55,7 +55,7 @@ def grpc_deps():
         )
 
     if "com_envoyproxy_protoc_gen_validate" not in native.existing_rules():
-        commit = "4c2cb6c23c588a10835d1ddefd50de4811490529"
+        commit = "e52c333e6fe07fca4ed76fd09263e2fb6092c720"
         http_archive(
             name = "com_envoyproxy_protoc_gen_validate",
             # sha256 = "10bedaab907d9a7a1b289579797520973c72482cfedf00cdb5f51c706b506a8eq",
