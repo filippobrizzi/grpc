@@ -58,7 +58,7 @@ def grpc_deps():
         commit = "e52c333e6fe07fca4ed76fd09263e2fb6092c720"
         http_archive(
             name = "com_envoyproxy_protoc_gen_validate",
-            # sha256 = "10bedaab907d9a7a1b289579797520973c72482cfedf00cdb5f51c706b506a8eq",
+            sha256 = "10bedaab907d9a7a1b289579797520973c72482cfedf00cdb5f51c706b506a8e1",
             strip_prefix = "protoc-gen-validate-{commit}".format(commit=commit),
             urls = ["https://github.com/filippobrizzi/protoc-gen-validate/archive/{commit}.tar.gz".format(commit=commit)],
         )
