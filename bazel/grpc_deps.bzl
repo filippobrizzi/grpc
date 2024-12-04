@@ -55,14 +55,13 @@ def grpc_deps():
             ],
         )
 
-    # if "com_envoyproxy_protoc_gen_validate" not in native.existing_rules():
-    #     commit = "e52c333e6fe07fca4ed76fd09263e2fb6092c720"
-    #     http_archive(
-    #         name = "com_envoyproxy_protoc_gen_validate",
-    #         sha256 = "118ef8c78ee6b18c5bc7ec6b83b19eba7dfeb24264101ba023113b880eb02c04",
-    #         strip_prefix = "protoc-gen-validate-{commit}".format(commit = commit),
-    #         urls = ["https://github.com/filippobrizzi/protoc-gen-validate/archive/{commit}.tar.gz".format(commit = commit)],
-    #     )
+    if "com_envoyproxy_protoc_gen_validate" not in native.existing_rules():
+        commit = "1a1af21014b200beb64fbe809b1b392fd008494c"
+        http_archive(
+            name = "com_envoyproxy_protoc_gen_validate",
+            strip_prefix = "protoc-gen-validate-{commit}".format(commit = commit),
+            urls = ["https://github.com/filippobrizzi/protoc-gen-validate/archive/{commit}.tar.gz".format(commit = commit)],
+        )
 
 
     if "google_cloud_cpp" not in native.existing_rules():
