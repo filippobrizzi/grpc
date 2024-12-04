@@ -44,6 +44,7 @@ def grpc_deps():
 
 
     if "opencensus_proto" not in native.existing_rules():
+
         http_archive(
             name = "opencensus_proto",
             sha256 = "b7e13f0b4259e80c3070b583c2f39e53153085a6918718b1c710caf7037572b0",
