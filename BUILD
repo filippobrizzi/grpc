@@ -1896,6 +1896,7 @@ grpc_cc_library(
         "absl/utility",
         "madler_zlib",
     ],
+    copts = ["-Wno-private-header"],
     language = "c++",
     linkopts = select({
         "systemd": ["-lsystemd"],
