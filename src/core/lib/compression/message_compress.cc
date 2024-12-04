@@ -22,7 +22,7 @@
 #include <grpc/support/alloc.h>
 #include <grpc/support/port_platform.h>
 #include <string.h>
-#include <zconf.h>
+// #include <zconf.h>
 #include <zlib.h>
 
 #include "absl/log/check.h"
