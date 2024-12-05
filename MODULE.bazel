@@ -8,7 +8,7 @@ module(
 bazel_dep(name = "protoc-gen-validate", version = "1.0.4", repo_name = "com_envoyproxy_protoc_gen_validate")
 git_override(
     module_name = "com_envoyproxy_protoc_gen_validate",
-    commit = "1a1af21014b200beb64fbe809b1b392fd008494c",
+    commit = "fabc326d74dc502beb6304ffca00109f6cb6cd24",
     remote = "https://github.com/filippobrizzi/protoc-gen-validate.git",
 )
 
